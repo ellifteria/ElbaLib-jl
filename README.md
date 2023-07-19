@@ -1,10 +1,5 @@
-# EJlLib
+# ElbaLib-jl
 
-## Elli's Julia Base Library
-
-Pronounced: edge lib
+Elli's Base Library: Julia
 
 ---
-
-A collection of functions and types useful for Julia development
-
