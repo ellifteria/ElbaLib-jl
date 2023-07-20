@@ -3,13 +3,22 @@ module Vector3
 include("Optionals.jl")
 using .Optionals
 
-export Vec3, add, scalar_add, hadamard, scalar_prod,
-  subtract, scalar_subtract, to_string, to_vector
+export Vec3, vec3_length_squared, vec3_length, add,
+  scalar_add, hadamard, scalar_prod, subtract,
+  scalar_subtract, to_string, to_vector, unit_vector
 
 struct Vec3{T}
   e1::T
   e2::T
   e3::T
+end
+
+function vec3_length_squared(vector::Vec3)
+  return vector.e1^2 + vector.e2^2 + vector.e3^3
+end
+
+function vec3_length(vector::Vec3)
+  return sqrt(vec3_length_squared(vector))
 end
 
 function add(lhs::Vec3, rhs::Vec3)::Vec3
@@ -51,6 +60,13 @@ function scalar_subtract(lhs::Vec3, rhs::Real)::Vec3
   return scalar_add(
     lhs,
     -1 * rhs
+  )
+end
+
+function unit_vector(vector::Vec3)
+  return scalar_prod(
+    vector,
+    1/vec3_length(vector)
   )
 end
 
