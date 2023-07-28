@@ -14,7 +14,7 @@ struct Vec3{T}
 end
 
 function vec3_length_squared(vector::Vec3)
-  return vector.e1^2 + vector.e2^2 + vector.e3^3
+  return vector.e1^2 + vector.e2^2 + vector.e3^2
 end
 
 function vec3_length(vector::Vec3)
