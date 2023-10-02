@@ -1,5 +1,8 @@
-# ElbaLib-jl
-
-Elli's Base Library: Julia
+# Ebla-Jl
 
 ---
+
+Elli's Base LibrAry: Julia
+
+---
+
